@@ -1,4 +1,6 @@
-import Profile from './container/Profile';
+import Profile from './profile/Profile';
+import propTypes from 'prop-types';
+import user from '../path/to/user.json';
 
 export const App = () => {
   return (
@@ -12,7 +14,10 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Profile />
+      <Profile user={user} />
     </div>
   );
+};
+App.propTypes = {
+  user: propTypes.shape({}),
 };
