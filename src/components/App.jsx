@@ -1,12 +1,13 @@
 import Profile from './profile/Profile';
-import propTypes from 'prop-types';
-import user from '../path/to/user.json';
+import Statistics from './statistics/Statistics';
+
+import user from 'path/to/user.json';
+import data from 'path/to/data.json';
 
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -15,9 +16,7 @@ export const App = () => {
       }}
     >
       <Profile user={user} />
+      <Statistics title="Upload stats" data={data} />
     </div>
   );
-};
-App.propTypes = {
-  user: propTypes.shape({}),
 };
