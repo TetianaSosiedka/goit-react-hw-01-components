@@ -1,10 +1,13 @@
 import propTypes from 'prop-types';
+
+import Container from './styled';
+
 import Description from '../Description';
 import Stats from '../Stats';
 
 const Profile = ({ user }) => {
   return (
-    <div className="profile">
+    <Container>
       <Description
         username={user.username}
         tag={user.tag}
@@ -12,7 +15,7 @@ const Profile = ({ user }) => {
         avatar={user.avatar}
       />
       <Stats stats={user.stats} />
-    </div>
+    </Container>
   );
 };
 

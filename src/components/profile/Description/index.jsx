@@ -1,13 +1,24 @@
 import propTypes from 'prop-types';
 
+import {
+  Container,
+  WrapDescriptions,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+} from './styled';
+
 const Description = ({ username, tag, location, avatar }) => {
   return (
-    <div className="description">
-      <img src={avatar} alt="User avatar" className="avatar" />
-      <p className="name">{username}</p>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
-    </div>
+    <Container>
+      <Avatar src={avatar} alt="User avatar" />
+      <WrapDescriptions>
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </WrapDescriptions>
+    </Container>
   );
 };
 
