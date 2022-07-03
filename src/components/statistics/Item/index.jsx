@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 
+import { DateItem, DateItemLabel, DateItemQuantity } from './styled';
+
 const Item = ({ label, percentage }) => {
   return (
-    <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}</span>
-    </li>
+    <DateItem>
+      <DateItemLabel>{label}</DateItemLabel>
+      <DateItemQuantity>{percentage}</DateItemQuantity>
+    </DateItem>
   );
 };
 

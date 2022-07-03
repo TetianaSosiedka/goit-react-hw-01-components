@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 
+import { SectionTitle } from './styled';
+
 const Title = ({ title }) => {
-  return <h2 className="title">{title}</h2>;
+  return <SectionTitle>{title}</SectionTitle>;
 };
 
 Title.prototype = {

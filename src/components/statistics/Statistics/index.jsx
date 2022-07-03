@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 
+import { Section } from './styled';
+
 import Title from '../Title';
 import Date from '../Date';
 
 const Statistiks = ({ title, data }) => {
   return (
-    <section className="statistics">
+    <Section>
       {title.length > 0 && <Title title={title} />}
       <Date data={data} />
-    </section>
+    </Section>
   );
 };
 
