@@ -6,7 +6,7 @@ import Date from '../Date';
 const Statistiks = ({ title, data }) => {
   return (
     <section className="statistics">
-      <Title title={title} />
+      {title.length > 0 && <Title title={title} />}
       <Date data={data} />
     </section>
   );
